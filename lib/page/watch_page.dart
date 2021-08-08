@@ -47,27 +47,25 @@ class _WatchPageState extends State<WatchPageWidget> {
       Text(
         '中国标准时间',
         style: TextStyle(
-          fontSize: 20,
-          color: Colors.black87,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: ColorUtils.BLACK_191,
         ),
       ),
       Text(
         _getDateFormat(),
         style: TextStyle(
-          fontSize: 14,
+          fontSize: 12,
           color: Colors.black38,
         ),
       ),
     ]);
     children.addAll(_buildWorldTimeWidgets());
-    children.add(new Container(height: 100));
-    return Scaffold(
-      backgroundColor: ColorUtils.BACKGROUND,
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: children,
-        ),
+    children.add(Container(height: 100));
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: children,
       ),
     );
   }
@@ -103,8 +101,8 @@ class _WatchPageState extends State<WatchPageWidget> {
                       Text(
                         time.cityName,
                         style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black87,
+                          fontSize: 16,
+                          color: ColorUtils.BLACK_191,
                         ),
                       ),
                       Text(
@@ -112,11 +110,27 @@ class _WatchPageState extends State<WatchPageWidget> {
                             ? '早' + hour.toString() + '小时'
                             : '晚' + (-hour).toString() + '小时',
                         style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black12,
+                          fontSize: 12,
+                          color: ColorUtils.BLACK_666,
                         ),
                       ),
                     ],
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 4),
+                  child: Text(
+                    DateTime.fromMillisecondsSinceEpoch(
+                                    _time.millisecondsSinceEpoch +
+                                        time.interval * 1000)
+                                .hour <
+                            13
+                        ? "上午 "
+                        : "下午 ",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: ColorUtils.BLACK_191,
+                    ),
                   ),
                 ),
                 Text(
@@ -126,8 +140,8 @@ class _WatchPageState extends State<WatchPageWidget> {
                     format: DateFormat.HOUR_MINUTE,
                   ),
                   style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.black87,
+                    fontSize: 18,
+                    color: ColorUtils.BLACK_191,
                   ),
                 ),
               ],

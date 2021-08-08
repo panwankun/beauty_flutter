@@ -19,9 +19,9 @@ class BasePageWidget extends WillPopScope {
     this.actions,
   }) : super(
           onWillPop: () {
-            new NavigatorUtils().pop(context);
+            NavigatorUtils().pop(context);
           },
-          child: new Scaffold(
+          child: Scaffold(
             appBar: _AppBar(
               title: title,
               titleWidget: titleWidget,
@@ -51,13 +51,13 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       color: Colors.blue,
-      child: new AppBar(
+      child: AppBar(
         title: titleWidget ??
-            new Text(
+            Text(
               title,
-              style: new TextStyle(
+              style: TextStyle(
                   fontSize: 17.0,
                   color: ColorUtils.WHITE,
                   fontWeight: FontWeight.w700),
@@ -66,15 +66,15 @@ class _AppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: actions,
         backgroundColor: ColorUtils.TRANSPARENT,
         elevation: 0.0,
-        leading: new Container(
+        leading: Container(
           margin: EdgeInsets.all(5.0),
-          child: new InkWell(
+          child: InkWell(
             highlightColor: const Color(0xFF27518F),
             borderRadius: BorderRadius.circular(64.0),
             onTap: () {
-              new NavigatorUtils().pop(context);
+              NavigatorUtils().pop(context);
             },
-            child: new Icon(Icons.arrow_back),
+            child: Icon(Icons.arrow_back),
           ),
         ),
       ),

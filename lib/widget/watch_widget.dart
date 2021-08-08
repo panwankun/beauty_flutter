@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 
 class WatchWidget extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => new _WatchWidgetState();
+  State<StatefulWidget> createState() => _WatchWidgetState();
 }
 
 class _WatchWidgetState extends State<WatchWidget> {
@@ -32,8 +32,8 @@ class _WatchWidgetState extends State<WatchWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return new CustomPaint(
-      painter: new _WatchPainter(_time),
+    return CustomPaint(
+      painter: _WatchPainter(_time),
     );
   }
 }
@@ -150,19 +150,19 @@ class _WatchPainter extends CustomPainter {
                 center.dy - math.cos(radian) * radius * 0.85),
             paint);
 
-        TextSpan span = new TextSpan(
-            style: new TextStyle(
+        TextSpan span = TextSpan(
+            style: TextStyle(
               color: Colors.white,
               fontSize: 18.0,
             ),
             text: (hour == 0 ? 12 : hour).toString());
         TextPainter tp =
-            new TextPainter(text: span, textDirection: TextDirection.ltr);
+            TextPainter(text: span, textDirection: TextDirection.ltr);
         tp.layout();
 
         tp.paint(
             canvas,
-            new Offset(
+            Offset(
                 center.dx + math.sin(radian) * radius * 0.75 - tp.width / 2,
                 center.dy - math.cos(radian) * radius * 0.75 - tp.height / 2));
       } else {

@@ -14,18 +14,20 @@ class _CalculatorDetailPageState extends State<CalculatorDetailPage> {
       backgroundColor: Colors.transparent,
       body: Column(
         children: <Widget>[
-          Expanded(
+          Container(
+            height: 150,
             child: Hero(
               tag: 'cal_hero_top',
               child: _buildTopResultWidget(context),
             ),
           ),
-          Hero(
-            tag: 'cal_hero_bottom',
-            child: new Container(
-              height: 600,
-              color: Colors.white,
-              child: GridView.count(crossAxisCount: 4),
+          Expanded(
+            child: Hero(
+              tag: 'cal_hero_bottom',
+              child: new Container(
+                color: Colors.white,
+                child: GridView.count(crossAxisCount: 4),
+              ),
             ),
           ),
         ],

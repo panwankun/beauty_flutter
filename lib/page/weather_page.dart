@@ -3,43 +3,43 @@ import 'package:flutter/widgets.dart';
 
 class WeatherPageWidget extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => new _WeatherPageWidgetState();
+  State<StatefulWidget> createState() => _WeatherPageWidgetState();
 }
 
 class _WeatherPageWidgetState extends State<WeatherPageWidget> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       backgroundColor: const Color(0xFF87CEEB),
-      body: new Container(
+      body: Container(
           margin: EdgeInsets.only(bottom: 60),
-          child: new SingleChildScrollView(
-            child: new Column(
+          child: SingleChildScrollView(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                new Container(
+                Container(
                   height: 120,
                 ),
-                new Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    new Container(
+                    Container(
                       width: 60,
                     ),
-                    new Text(
+                    Text(
                       '25',
-                      style: new TextStyle(
+                      style: TextStyle(
                         fontSize: 90,
                         color: Colors.white,
                       ),
                     ),
-                    new Container(
+                    Container(
                       width: 60,
                       margin: EdgeInsets.only(top: 15),
-                      child: new Text(
+                      child: Text(
                         '°C',
-                        style: new TextStyle(
+                        style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
                         ),
@@ -47,21 +47,21 @@ class _WeatherPageWidgetState extends State<WeatherPageWidget> {
                     ),
                   ],
                 ),
-                new Container(
+                Container(
                   margin: EdgeInsets.only(top: 1),
-                  child: new Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      new Text(
+                      Text(
                         '28°C',
-                        style: new TextStyle(
+                        style: TextStyle(
                           fontSize: 16,
                           color: Colors.white,
                         ),
                       ),
-                      new Text(
+                      Text(
                         ' / 21°C',
-                        style: new TextStyle(
+                        style: TextStyle(
                           fontSize: 16,
                           color: Colors.white54,
                         ),
@@ -69,32 +69,32 @@ class _WeatherPageWidgetState extends State<WeatherPageWidget> {
                     ],
                   ),
                 ),
-                new Container(
+                Container(
                   margin: EdgeInsets.only(top: 10),
-                  child: new Text(
+                  child: Text(
                     '晴 空气良',
-                    style: new TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       color: Colors.white54,
                     ),
                   ),
                 ),
-                new Container(
+                Container(
                   margin: EdgeInsets.only(top: 30),
-                  child: new Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      new Container(
+                      Container(
                         width: 30,
                       ),
-                      new Text(
+                      Text(
                         '上海',
-                        style: new TextStyle(
+                        style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
                         ),
                       ),
-                      new Image.asset(
+                      Image.asset(
                         'image/ic_location.png',
                         width: 30,
                         height: 25,
@@ -102,38 +102,38 @@ class _WeatherPageWidgetState extends State<WeatherPageWidget> {
                     ],
                   ),
                 ),
-                new Container(
+                Container(
                   margin: EdgeInsets.only(
                     top: 5,
                   ),
-                  child: new Text(
+                  child: Text(
                     '上次更新时间：晚上9:36',
-                    style: new TextStyle(
+                    style: TextStyle(
                       fontSize: 12,
                       color: Colors.white54,
                     ),
                   ),
                 ),
-                new Container(
+                Container(
                   margin: EdgeInsets.only(
                     top: 40,
                     left: 20,
                     right: 20,
                   ),
-                  child: new Row(
+                  child: Row(
                     children: <Widget>[
-                      new Expanded(
-                        child: new Text(
+                      Expanded(
+                        child: Text(
                           '中国天气通',
-                          style: new TextStyle(
+                          style: TextStyle(
                             fontSize: 12,
                             color: Colors.white54,
                           ),
                         ),
                       ),
-                      new Text(
+                      Text(
                         '43 分钟前发布',
-                        style: new TextStyle(
+                        style: TextStyle(
                           fontSize: 12,
                           color: Colors.white54,
                         ),
@@ -141,7 +141,7 @@ class _WeatherPageWidgetState extends State<WeatherPageWidget> {
                     ],
                   ),
                 ),
-                new Container(
+                Container(
                   height: 0.5,
                   color: Colors.white54,
                   margin: EdgeInsets.only(

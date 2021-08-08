@@ -6,22 +6,21 @@ import 'calculator_detail_page.dart';
 
 class CalculatorPageWidget extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => new _CalculatorPageWidgetState();
+  State<StatefulWidget> createState() => _CalculatorPageWidgetState();
 }
 
 class _CalculatorPageWidgetState extends State<CalculatorPageWidget> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       backgroundColor: ColorUtils.BACKGROUND,
-      body: new Column(
+      body: Column(
         children: <Widget>[
           Hero(
             tag: 'cal_hero_top',
-            child: Container(),
-          ),
-          Container(
-            height: 60,
+            child: Container(
+              height: 60,
+            ),
           ),
           Expanded(
             child: GridView.count(
@@ -32,12 +31,11 @@ class _CalculatorPageWidgetState extends State<CalculatorPageWidget> {
               children: _generateCalculatorWidgets(),
             ),
           ),
-          Container(
-            height: 60,
-          ),
           Hero(
             tag: 'cal_hero_bottom',
-            child: Container(),
+            child: Container(
+              height: 60,
+            ),
           ),
         ],
       ),
@@ -46,21 +44,21 @@ class _CalculatorPageWidgetState extends State<CalculatorPageWidget> {
 
   List _generateCalculatorWidgets() {
     List<_WidgetItem> items = <_WidgetItem>[];
-    items.add(new _WidgetItem('长度换算', 'image/ic_ruler.png'));
-    items.add(new _WidgetItem('面积换算', 'image/ic_area.png'));
-    items.add(new _WidgetItem('体积换算', 'image/ic_three_dimensions.png'));
-    items.add(new _WidgetItem('时间换算', 'image/ic_time.png'));
-    items.add(new _WidgetItem('温度换算', 'image/ic_temperature.png'));
-    items.add(new _WidgetItem('速度换算', 'image/ic_speed.png'));
-    items.add(new _WidgetItem('角度换算', 'image/ic_angle.png'));
-    items.add(new _WidgetItem('重量换算', 'image/ic_weight.png'));
-    items.add(new _WidgetItem('力量换算', 'image/ic_dynamometer.png'));
-    items.add(new _WidgetItem('压力换算', 'image/ic_pressure.png'));
-    items.add(new _WidgetItem('大写数字', 'image/ic_chinese_number.png'));
-    items.add(new _WidgetItem('字节换算', 'image/ic_byte.png'));
-    items.add(new _WidgetItem('密度换算', 'image/ic_density.png'));
-    items.add(new _WidgetItem('功率换算', 'image/ic_power.png'));
-    items.add(new _WidgetItem('热量换算', 'image/ic_heat.png'));
+    items.add(_WidgetItem('长度换算', 'image/ic_ruler.png'));
+    items.add(_WidgetItem('面积换算', 'image/ic_area.png'));
+    items.add(_WidgetItem('体积换算', 'image/ic_three_dimensions.png'));
+    items.add(_WidgetItem('时间换算', 'image/ic_time.png'));
+    items.add(_WidgetItem('温度换算', 'image/ic_temperature.png'));
+    items.add(_WidgetItem('速度换算', 'image/ic_speed.png'));
+    items.add(_WidgetItem('角度换算', 'image/ic_angle.png'));
+    items.add(_WidgetItem('重量换算', 'image/ic_weight.png'));
+    items.add(_WidgetItem('力量换算', 'image/ic_dynamometer.png'));
+    items.add(_WidgetItem('压力换算', 'image/ic_pressure.png'));
+    items.add(_WidgetItem('大写数字', 'image/ic_chinese_number.png'));
+    items.add(_WidgetItem('字节换算', 'image/ic_byte.png'));
+    items.add(_WidgetItem('密度换算', 'image/ic_density.png'));
+    items.add(_WidgetItem('功率换算', 'image/ic_power.png'));
+    items.add(_WidgetItem('热量换算', 'image/ic_heat.png'));
 
     List children = <Widget>[];
     for (int i = 0; i < items.length; i++) {
@@ -74,21 +72,21 @@ class _CalculatorPageWidgetState extends State<CalculatorPageWidget> {
                     CalculatorDetailPage(),
               ));
         },
-        child: new Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Image.asset(
+            Image.asset(
               items[i].icon,
               width: 50,
               height: 50,
             ),
-            new Container(
+            Container(
               height: 20,
             ),
-            new Text(
+            Text(
               items[i].title,
-              style: new TextStyle(
+              style: TextStyle(
                 fontSize: 12,
                 color: Colors.black54,
               ),
